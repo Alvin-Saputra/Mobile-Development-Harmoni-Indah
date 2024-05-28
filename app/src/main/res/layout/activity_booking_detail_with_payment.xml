@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imgae_bg2"
+    tools:context=".Booking_Detail_With_Payment_Activity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton_back_detail_booking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="55dp"
+        android:clickable="true"
+        android:rotation="223"
+        android:src="@drawable/arrow_icon"
+        app:backgroundTint="@color/app_theme_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/RoundedFAB" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="189dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="203dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Booking Details"
+        android:textColor="@color/app_theme_light"
+        android:textSize="38sp"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButton_back_detail_booking"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutKodeBooking"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNama_Pemesan_detail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextKodeBooking_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableLeft="@drawable/hotel_bed_line"
+                    android:drawablePadding="15dp"
+                    android:drawableTint="@color/app_theme"
+                    android:ems="10"
+                    android:hint="Kode booking"
+                    android:inputType="text"
+                    android:padding="15dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/editTextKodeKamar_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/hotel_bed_line"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/app_theme"
+                android:ems="10"
+                android:hint="Kode Kamar"
+                android:inputType="text"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutKodeBooking" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.8" />
+
+            <!-- Button Delete -->
+            <Button
+                android:id="@+id/button_delete_booking"
+                android:layout_width="106dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="50dp"
+                android:backgroundTint="@color/app_theme"
+                android:text="Delete"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_Check_out_detail"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!-- Button Update -->
+            <Button
+                android:id="@+id/button_update_booking"
+                android:layout_width="105dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="50dp"
+                android:backgroundTint="@color/app_theme"
+                android:text="Update"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button_delete_booking"
+                app:layout_constraintTop_toBottomOf="@+id/editText_Check_out_detail"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!-- Button Detail Payment -->
+            <Button
+                android:id="@+id/button_detail_payment"
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="50dp"
+                android:backgroundTint="@color/app_theme"
+                android:text="Detail Payment"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/button_update_booking"
+                app:layout_constraintTop_toBottomOf="@+id/editText_Check_out_detail"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/button_date_check_in_detail"
+                android:layout_width="114dp"
+                android:layout_height="58dp"
+                android:backgroundTint="@color/app_theme"
+                android:drawableLeft="@drawable/ic_calendar"
+                android:drawableTint="@color/app_theme_light"
+                android:text="Date"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_Check_in_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.523"
+                app:layout_constraintStart_toEndOf="@+id/editText_Check_in_detail"
+                app:layout_constraintTop_toTopOf="@+id/editText_Check_in_detail" />
+
+            <EditText
+                android:id="@+id/editText_Check_in_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@android:drawable/ic_menu_my_calendar"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/app_theme"
+                android:ems="10"
+                android:hapticFeedbackEnabled="true"
+                android:hint="Check In"
+                android:inputType="text"
+                android:padding="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextKodeKamar_detail" />
+
+            <EditText
+                android:id="@+id/editText_Check_out_detail"
+                android:layout_width="214dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@android:drawable/ic_menu_my_calendar"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/app_theme"
+                android:ems="10"
+                android:hapticFeedbackEnabled="true"
+                android:hint="Check Out"
+                android:inputType="text"
+                android:padding="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_Check_in_detail" />
+
+            <Button
+                android:id="@+id/button_date_check_out_detail"
+                android:layout_width="114dp"
+                android:layout_height="58dp"
+                android:backgroundTint="@color/app_theme"
+                android:drawableLeft="@drawable/ic_calendar"
+                android:drawableTint="@color/app_theme_light"
+                android:text="Date"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_Check_out_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toEndOf="@+id/editText_Check_out_detail"
+                app:layout_constraintTop_toTopOf="@+id/editText_Check_out_detail"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <EditText
+                android:id="@+id/editTextNama_Pemesan_detail"
+                android:layout_width="362dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="44dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/person_icon"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/app_theme"
+                android:ems="10"
+                android:hint="Nama Pemesan"
+                android:inputType="text"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.51"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

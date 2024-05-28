@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="2dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/foto_kamar_book"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:paddingStart="5dp"
+            android:src="@drawable/ic_launcher_background"
+            tools:ignore="ImageContrastCheck,RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/txt_kode_booking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/foto_kamar_book"
+            android:text="Kode Booking"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_status_booking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="142dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/foto_kamar_book"
+            android:text="Status_Booking" />
+
+        <TextView
+            android:id="@+id/txt_waktu_check_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="142dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@id/foto_kamar_book"
+            android:text="Waktu_Check_In" />
+
+        <TextView
+            android:id="@+id/txt_waktu_check_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="142dp"
+            android:layout_marginTop="70dp"
+            android:layout_toEndOf="@id/foto_kamar_book"
+            android:text="Waktu_Check_Out" />
+
+        <TextView
+            android:id="@+id/txt_nama_pemesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@id/foto_kamar_book"
+            android:text="Nama Pemesan" />
+
+        <TextView
+            android:id="@+id/txt_kode_kamar_book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="70dp"
+            android:layout_toEndOf="@id/foto_kamar_book"
+            android:text="Kode_Kamar" />
+
+        <Button
+            android:id="@+id/btn_booking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="100dp"
+            android:layout_toEndOf="@id/foto_kamar_book"
+            android:backgroundTint="@color/app_theme"
+            android:text="Check Out"
+            android:focusable="false"
+            app:cornerRadius="10dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

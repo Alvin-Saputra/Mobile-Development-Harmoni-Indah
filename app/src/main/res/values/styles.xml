@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="RoundedFAB" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item> <!-- Adjust this value to control the roundness -->
+    </style>
+
+    <style name="roundimageview" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">30dp</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="cirleimageview">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="rounded_image_view2">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">7%</item>
+    </style>
+
+    <style name="rounded_image_view3">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15%</item>
+    </style>
+
+    <style name="rounded_image_button">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">30dp</item>
+    </style>
+
+</resources>

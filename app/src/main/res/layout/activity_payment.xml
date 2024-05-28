@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imgae_bg2"
+    tools:context=".BookingActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton_back_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:clickable="true"
+        android:rotation="223"
+        android:src="@drawable/arrow_icon"
+        app:backgroundTint="@color/app_theme_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/RoundedFAB" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="110dp" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="266dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Payment"
+        android:textColor="@color/app_theme_light"
+        android:textSize="36sp"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButton_back_payment"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutKodeBooking"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNama_Pemesan">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextKodeBooking_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableLeft="@drawable/hotel_bed_line"
+                    android:drawablePadding="15dp"
+                    android:drawableTint="@color/app_theme"
+                    android:ems="10"
+                    android:hint="Kode booking"
+                    android:inputType="text"
+                    android:padding="15dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/editTextKodeKamar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/hotel_bed_line"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/app_theme"
+                android:ems="10"
+                android:hint="Kode Kamar"
+                android:inputType="text"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutKodeBooking" />
+
+            <EditText
+                android:id="@+id/editTextTipeKamar"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/hotel_bed_line"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/app_theme"
+                android:ems="10"
+                android:hint="Tipe Kamar"
+                android:inputType="text"
+                android:padding="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextKodeKamar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.571"
+                app:layout_constraintStart_toEndOf="@+id/editTextKodeKamar"
+                app:layout_constraintTop_toTopOf="@+id/editTextKodeKamar"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+            <Button
+                android:id="@+id/button_bayar"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="@color/app_theme"
+                android:text="BAYAR"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutTotalBayar" />
+
+            <EditText
+                android:id="@+id/editText_Check_in_check_out"
+                android:layout_width="168dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@android:drawable/ic_menu_my_calendar"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/app_theme"
+                android:ems="10"
+                android:hapticFeedbackEnabled="true"
+                android:hint="Check In"
+                android:inputType="text"
+                android:padding="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextKodeKamar" />
+
+
+            <EditText
+                android:id="@+id/editText_Check_out_check_out"
+                android:layout_width="167dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="28dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@android:drawable/ic_menu_my_calendar"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/app_theme"
+                android:ems="10"
+                android:hapticFeedbackEnabled="true"
+                android:hint="Check Out"
+                android:inputType="text"
+                android:padding="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_Check_in_check_out"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editText_Check_in_check_out"
+                app:layout_constraintVertical_bias="0.96" />
+
+            <EditText
+                android:id="@+id/editTextNama_Pemesan"
+                android:layout_width="362dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="44dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/person_icon"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/app_theme"
+                android:ems="10"
+                android:hint="Nama Pemesan"
+                android:inputType="text"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.51"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutLamaMenginap"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_Check_out_check_out">
+
+                <EditText
+                    android:id="@+id/editTextLama_menginap"
+                    android:layout_width="362dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableLeft="@drawable/hotel_bed_line"
+                    android:drawablePadding="15dp"
+                    android:drawableTint="@color/app_theme"
+                    android:ems="10"
+                    android:hint="Jumlah Hari Inap"
+                    android:inputType="text"
+                    android:padding="15dp"
+
+                     />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutMetodePembayaran"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutLamaMenginap">
+
+                <EditText
+                    android:id="@+id/editTextMetode_pembayaran"
+                    android:layout_width="362dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableLeft="@drawable/hotel_bed_line"
+                    android:drawablePadding="15dp"
+                    android:drawableTint="@color/app_theme"
+                    android:ems="10"
+                    android:hint="Metode Pembayaran"
+                    android:inputType="text"
+                    android:padding="15dp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutHargaPerMalam"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutMetodePembayaran">
+
+                <EditText
+                    android:id="@+id/editTextharga_per_malam"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableLeft="@drawable/hotel_bed_line"
+                    android:drawablePadding="15dp"
+                    android:drawableTint="@color/app_theme"
+                    android:ems="10"
+                    android:hint="Harga Per Malam"
+                    android:inputType="text"
+                    android:padding="15dp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutTotalBayar"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutHargaPerMalam">
+
+                <EditText
+                    android:id="@+id/editTextTotal_bayar"
+                    android:layout_width="362dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableLeft="@drawable/hotel_bed_line"
+                    android:drawablePadding="15dp"
+                    android:drawableTint="@color/app_theme"
+                    android:ems="10"
+                    android:hint="Total Bayar"
+                    android:inputType="text"
+                    android:padding="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayoutHargaPerMalam" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imgae_bg2"
+    tools:context=".SignupActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton_back_crud_kamar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:rotation="223"
+        android:src="@drawable/arrow_icon"
+        app:backgroundTint="@color/app_theme_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/RoundedFAB" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="198dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Input Data Kamar"
+        android:textColor="@color/app_theme_light"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextKodeKamar"
+                android:layout_width="172dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="44dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/hotel_bed_line"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/app_theme"
+                android:ems="10"
+                android:hint="Kode Ruangan"
+                android:inputType="text"
+                android:padding="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gambar_kamar" />
+
+            <EditText
+                android:id="@+id/editTextHarga_Per_Malam"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/money_dollar_circle_fill"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/app_theme"
+                android:ems="10"
+                android:hapticFeedbackEnabled="true"
+                android:hint="Harga Permalam"
+                android:inputType="text"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextKodeKamar" />
+
+            <Button
+                android:id="@+id/button_submit_kamar"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="@color/app_theme"
+                android:text="Submit"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextHarga_Per_Malam"
+                app:layout_constraintVertical_bias="0.231" />
+
+            <Button
+                android:id="@+id/button_delete"
+                android:layout_width="0dp"
+                android:layout_height="61dp"
+                android:layout_marginStart="30dp"
+                android:backgroundTint="@color/app_theme"
+                android:text="Delete"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_submit_kamar"
+                app:layout_constraintVertical_bias="0.41000003" />
+
+            <Button
+                android:id="@+id/button_booking"
+                android:layout_width="wrap_content"
+                android:layout_height="61dp"
+                android:layout_marginStart="28dp"
+                android:backgroundTint="@color/app_theme"
+                android:text="Booking"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_edit"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/button_delete"
+                app:layout_constraintTop_toBottomOf="@+id/button_submit_kamar"
+                app:layout_constraintVertical_bias="0.421" />
+
+            <Button
+                android:id="@+id/button_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="61dp"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="@color/app_theme"
+                android:text="Edit"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_submit_kamar"
+                app:layout_constraintVertical_bias="0.423" />
+
+            <ImageView
+                android:id="@+id/gambar_kamar"
+                android:layout_width="168dp"
+                android:layout_height="151dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="@color/app_theme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/upload_icon" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:entries="@array/tipe_kamar"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextKodeKamar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editTextKodeKamar"
+                app:layout_constraintTop_toTopOf="@+id/editTextKodeKamar" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputlayout_tipe_kamar"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="@string/select"
+                app:boxStrokeColor="@color/app_theme"
+                app:boxStrokeWidth="0dp"
+
+                app:layout_constraintBottom_toBottomOf="@+id/editTextKodeKamar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editTextKodeKamar"
+                app:layout_constraintTop_toTopOf="@+id/editTextKodeKamar">
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_txt"
+                    android:layout_width="150dp"
+                    android:layout_height="53dp"
+                    android:inputType="none"
+                    android:visibility="visible" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

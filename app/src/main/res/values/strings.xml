@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Proyek UAS Kelompok 5</string>
+    <string name="select">Pilih Tipe Kamar</string>
+    <string-array name="tipe_kamar">
+        <item>Standar</item>
+        <item>Superior</item>
+        <item>Deluxe</item>
+        <item>Suite</item>
+    </string-array>
+</resources>
