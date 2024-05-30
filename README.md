@@ -5,7 +5,7 @@ Create an android app for booking hotel rooms. This app can only be access by ad
 
 ![Harmoni_Indah_Mockup](https://github.com/Alvin-Saputra/Harmoni-Indah-CRUD-App/assets/145079710/754fbe40-05ec-4a2b-8b91-8676e9313969)
 
-##Instalion
+## Instalion
 1. Clone/Download This Project
 2. Install Android Studio
 3. Open the project on Android Studio
