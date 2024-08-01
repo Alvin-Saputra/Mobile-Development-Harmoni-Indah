@@ -1,6 +1,8 @@
 # Harmoni Indah CRUD App
 
 ## Overview
+See More Of My Project: https://drive.google.com/drive/u/0/folders/1eK-Qjee9N_1Kk6lJ3-XXigN1crcgru_G
+
 Create an android app for booking hotel rooms. This app can only be access by admin/receptionist.
 
 ![Harmoni_Indah_Mockup](https://github.com/Alvin-Saputra/Harmoni-Indah-CRUD-App/assets/145079710/754fbe40-05ec-4a2b-8b91-8676e9313969)
